@@ -1,0 +1,228 @@
+<?php
+
+if(!function_exists('mcfgf_add_admin_woo_product_picker_generator_menu')) :
+add_action( 'admin_menu', 'mcfgf_add_admin_woo_product_picker_generator_menu' );
+
+
+function mcfgf_add_admin_woo_product_picker_generator_menu(  ) { 
+
+    add_submenu_page( 
+          'magic_conversation_for_gravity_forms' 
+        , 'WooCommerce Product Picker Generator' 
+        , 'WooCommerce Product Picker Generator'
+        , 'manage_options'
+        , 'mcfgf_conversation_woo_product_picker_generator'
+        , 'mcfgf_woo_product_picker_generator_page'
+    );
+}
+
+
+
+function mcfgf_woo_product_picker_generator_page(  ) { 
+	$confirmation_id                 = uniqid();
+	$confirmations                   = array();
+	$confirmations[ $confirmation_id ] = array(
+		'id'          => $confirmation_id,
+		'name'        => __( 'Default Confirmation', 'gravityforms' ),
+		'isDefault'   => true,
+		'type'        => 'message',
+		'message'     => __( 'Thanks for contacting us! We will get in touch with you shortly.', 'gravityforms' ),
+		'url'         => '',
+		'pageId'      => '',
+		'queryString' => '',
+	);
+
+	if(isset($_POST['mcfgf_generate_woo_product_picker']) && $_POST['mcfgf_generate_woo_product_picker'] && isset($_POST['product_ids']) && $_POST['product_ids'] && isset($_POST['form_id']) && $_POST['form_id']) {
+		$form_id = $_POST['form_id'];
+		$form = GFAPI::get_form( $form_id );
+		$maxid = 0;
+		foreach ($form['fields'] as $field) {
+			if($field['id'] > $maxid) $maxid = $field['id'];
+		}
+
+		$product_ids = $_POST['product_ids'];
+		// print_r($product_ids);
+		// die();
+		$products = mcfgf_get_products_by_ids($product_ids);
+		$maxid += 1;
+		$product_field_id = $maxid;
+		$product_choices = array(
+            'id' => $product_field_id,
+            'label' => 'Please choose a product',
+            'type'  => 'radio',
+            'choices' => array(),
+            'mcfgf_enable_woocommerce_product' => true,
+            'mcfgf_woocommerce_product_template_normal' => '<div style="background-color:white;width:190px">
+	<img src="{imageSrc}" alt="{label}" style="width:160px;height:160px;margin:15px;"/>
+	<div class="full-width text-center">{price}</div>
+	<div class="full-width text-center" style="padding:5px;">{label}</div>
+</div>',
+            'mcfgf_woocommerce_product_template_selected' => '<div style="background-color:#e6f7ff;width:190px">
+	<img src="{imageSrc}" alt="{label}" style="width:160px;height:160px;margin:15px;"/>
+	<div class="full-width text-center" style="color:#1890ff">{price}</div>
+	<b class="full-width text-center" style="padding:5px;color:#1890ff">{label}</b>
+</div>',
+            'enableChoiceValue' => true,
+            'enablePrice' => true,
+        );
+
+        $variation_fields = [];
+
+		foreach ($products as $product) {
+			$post_thumbnail_id = get_post_thumbnail_id( $product['id'] );
+			if($post_thumbnail_id > 0) {
+				$images = wp_get_attachment_image_src($post_thumbnail_id);
+				$image = $images[0];
+			} else {
+				$image = '';
+			}
+			$product_choices['choices'][] = array(
+            	'text' => $product['title'], 
+            	'value' => $product['id']."",
+            	'price' => $product['price']."",
+            	'mcfgfImageUrl' => $image,
+            	'isSelected' => false,
+            );
+
+            $request = new WP_REST_Request( 'GET', '/wc/v2/products/'.$product['id'] );
+            // $request->set_query_params( [ 'per_page' => 12 ] );
+            $response = rest_do_request( $request );
+            $server = rest_get_server();
+            $data = $server->response_to_data( $response, false );
+
+
+            //handle variations
+            $variations = array();
+            foreach ($data['variations'] as $variation_id) {
+                $request_v = new WP_REST_Request( 'GET', '/wc/v2/products/'.$product['id'].'/variations/'.$variation_id );
+                // $request->set_query_params( [ 'per_page' => 12 ] );
+                $response_v = rest_do_request( $request_v );
+                $server_v = rest_get_server();
+                $data_v = $server_v->response_to_data( $response_v, false );
+                $variations[] = $data_v['attributes'];
+            }
+
+            
+            if(count($variations) > 0) {
+            	$c = count($variations[0]);
+            	for($i =0; $i <$c; $i+=1) {
+            		$maxid += 1;
+            		$variation_fields[] = mcfgf_get_radio_field_of_woo_product_variation($variations, $maxid, $i, $product['id'], $product_field_id);
+            	}
+            }
+            
+
+            // foreach ($variations as $variation) {
+            	
+            // }
+
+		}
+
+		
+		// $form['title'] = 'New Title';
+		
+		
+
+		$form['fields'][] = $product_choices;
+
+		$form['fields'] = array_merge($form['fields'], $variation_fields);
+
+
+		// $forms = array(
+	 //    	array(
+	 //        	'title'          => $_POST['formtitle'],
+	 //        	'description'    => 'This is a WooCommerce Product Picker generated by Magic Conversation for Gravity Forms',
+	 //        	'labelPlacement' => 'top_label',
+	 //        	'button'         => array(
+	 //                'type' => 'text'
+	 //        	),
+		//         'confirmations'   => $confirmations,
+	 //        	'fields'=> array(
+	 //                $product_choices,
+	 //                array(
+	 //                    'id' => '2',
+	 //                    'label' => 'Radio group test',
+	 //                    'type'  => 'radio',
+	 //                    'choices' => array(
+		//                     array(
+		//                     	'text' => 'First Choice', 
+		//                     	'value' => 'first_choice',
+		//                     	'isSelected' => false
+		//                     ),
+		//                     array(
+		//                     	'text' => 'Second Choice', 
+		//                     	'value' => 'second_choice',
+		//                     	'isSelected' => false
+		//                     ),
+		//                     array(
+		//                     	'text' => 'Third Choice', 
+		//                     	'value' => 'third_choice',
+		//                     	'isSelected' => false
+		//                     )
+	 //                    ),
+	 //                    "conditionalLogic" => array(
+		// 					"actionType" => "show",
+		// 					"logicType" => "all",
+		// 					"rules" => array(
+		// 						array(
+		// 							"fieldId" => "1",
+		// 							"operator" => "is",
+		// 							"value" => "2570"
+		// 						)
+		// 					)
+		// 				)
+	 //                ),
+	 //            ),
+	 //    	)
+	 //    );
+
+	    $result = GFAPI::update_form( $form );
+ 		// $forms_added = GFAPI::add_forms($forms);
+
+ 		if(!empty($result)) {
+ 			// mcfgf_woo_product_conversation_generated_notices($forms_added[0]);
+
+			mcfgf_woo_product_conversation_generated_notices($form_id);
+ 			
+ 		}
+	}
+
+	?>
+	<form method='post'>
+		<input type='hidden' name='mcfgf_generate_woo_product_picker' value="1">
+		<div class="wrap"><h1>WooCommerce Product Picker Generator</h1></div>
+		<p>This tool helps you generate a conversational Gravity Form that help user checkout a product (simple or variations) from list quickly.</p>
+		<table class="form-table">
+			<tbody>
+				<tr><th scope="row">Target Form</th><td><?php echo mcfgf_forms_picker($fieldname = 'form_id', $placeholder = 'Please choose a form'); ?></td></tr>
+				<tr><th scope="row">Products</th><td><select  name='product_ids[]' id="select-product" class="products selectized" placeholder="Find and pick products..." tabindex="-1" style="display: none;"><option value="" selected="selected"></option></select></td></tr>
+			</tbody>
+		</table>
+		
+		<?php
+		submit_button('Generate');
+		?>
+		
+	</form>
+	<?php
+
+}
+
+function mcfgf_woo_product_conversation_generated_notices($form_id) {
+	$link1 = home_url('/magic-conversation/'.$form_id.'/');
+
+	$link1 = sprintf( '<a href="%s">%s</a>', $link1, esc_html( __( 'View Conversation', 'mcfgf' ) ) );
+
+	$link2 = admin_url('admin.php?page=gf_edit_forms&id='.$form_id);
+
+	$link2 = sprintf( '<a href="%s">%s</a>', $link2, esc_html( __( 'Edit Gravity Form', 'mcfgf' ) ) );
+
+	$message = __( "WooCommerce Product Picker generated.", 'mtfcf7' );
+
+	echo sprintf( '<div class="notice notice-success is-dismissible"><p>%s &raquo; %s &raquo; %s</p></div>', esc_html( $message ), $link1, $link2 );
+}
+
+endif;
+
+
+?>

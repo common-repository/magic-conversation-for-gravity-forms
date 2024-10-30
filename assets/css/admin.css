@@ -1,0 +1,202 @@
+.taxonomy-mc-question-category .term-slug-wrap, .taxonomy-mc-question-category .term-parent-wrap, .taxonomy-mc-question-category .term-description-wrap {
+	display: none;
+}
+
+.taxonomy-mc-question-category .wp-list-table .description, .taxonomy-mc-question-category .wp-list-table .column-description  {
+	display: none;
+}
+.taxonomy-mc-question-category .wp-list-table .slug, .taxonomy-mc-question-category .wp-list-table .column-slug  {
+	display: none;
+}
+
+.mcfgf-term-hint {
+	font-style: italic;
+	color: #666;
+	margin: 2px 0 5px;
+}
+
+#adminmenu #toplevel_page_magic_conversation_for_gravity_forms .menu-icon-generic div.wp-menu-image {
+	background:url(../img/icon.png);
+	background-size:15px 15px;
+}
+
+#adminmenu #toplevel_page_magic_conversation_for_gravity_forms .menu-icon-generic div.wp-menu-image:before {
+    content: "" !important;
+    font-size: 1.3em !important;
+    background:url(../img/icon.png) 2px 10px no-repeat;
+	background-size:17px 17px;
+}
+
+.mcfgf-conversation-generator-form-box h2 {display: none;}
+
+#mcfgf-options-form h3, #mcfgf-options-form h2 {display: none}
+
+#mcfgf-options-form input[type='text'] {width: 500px;}
+
+#mcfgf-options-form .mm-tick {color:#008000;font-size: 18px;font-weight: bold;}
+#mcfgf-options-form .mm-error {color:#ff0000;font-size: 18px;font-weight: bold;}
+
+
+#mcfgf_tab_yakker .CodeMirror {
+    border: 1px solid #eee;
+    height: auto;
+    max-height:200px;
+}
+
+#mcfgf_tab_yakker .CodeMirror-scroll {
+    height: auto;
+    max-height:200px;
+}
+
+.mcfgf_upload_image_button {
+	display: inline-block !important;
+	vertical-align: top !important;
+	width: 26px !important;
+	height: 24px !important;
+	padding: 0px !important;
+	line-height: 2px !important;
+	box-sizing: border-box !important;
+	margin-top: 4px !important;
+	margin-left: 5px !important;
+}
+
+.mcfgf-image-preview-wrapper {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.mt10 {
+	margin-top: 10px;
+}
+
+.mt15 {
+	margin-top: 15px;
+}
+.mt20 {
+	margin-top: 20px;
+}
+
+.mt30 {
+	margin-top: 30px;
+}
+
+.mb10 {
+	margin-bottom: 10px;
+}
+
+.mb15 {
+	margin-bottom: 15px;
+}
+
+.mb30 {
+	margin-bottom: 30px;
+}
+
+cf-chat-response.user text thinking {
+	position: static !important;
+}
+
+cf-chat-response.robot {
+	margin-left: 0px !important;
+}
+
+.conversational-form {
+	opacity: 1 !important;
+}
+
+#mcfgf_basics h4 {
+	padding: 0px;
+	margin: 0px;
+}
+
+#mcfgf_basics label {
+	font-weight: normal;
+}
+
+#toggle-conversation {
+	display: none;
+}
+
+.image-preview-close {
+	position: relative;
+	width: 76px;
+}
+
+.image-preview-close .notice-dismiss {
+	padding: 0px;
+	margin-top: -3px;
+}
+
+.image-preview-wrapper {
+	width:60px;
+	height:60px;
+	border-radius: 50%;
+}
+
+.image-preview-wrapper img {
+	margin-left: 17px;
+	margin-top: 17px;
+}
+#gform_fields.description_below {
+	width: 600px !important;
+}
+
+.mcfgf_questions-custom-questions .all-merge-tags{
+	position: absolute;
+	right: -18px;
+	top: 35px;
+}
+
+#tab_gf_conversation  .gforms_form_settings th {
+	width: 230px;
+}
+
+/**
+ * Email Contacts
+ */
+.selectize-control.products .selectize-input [data-value] .email {
+	opacity: 0.5;
+}
+.selectize-control.products .selectize-input [data-value] .name + .email {
+	margin-left: 5px;
+}
+.selectize-control.products .selectize-input [data-value] .email:before {
+	content: '<';
+}
+.selectize-control.products .selectize-input [data-value] .email:after {
+	content: '>';
+}
+.selectize-control.products .selectize-dropdown [data-value]{
+	padding: 10px;
+}
+.selectize-control.products .selectize-dropdown .caption {
+	font-size: 12px;
+	display: block;
+	opacity: 0.5;
+}
+
+#quick_view_current_conversation {
+	display: none;
+}
+
+.image_button_width_num input, .image_button_height_num input {
+	width: 55px;
+}
+
+.image_button_width_unit, .image_button_height_unit {
+	position: relative;
+	display: block;
+}
+
+.image_button_width_unit th, .image_button_height_unit th{
+	display: none;
+}
+
+.image_button_width_unit td, .image_button_height_unit td{
+	position: absolute;
+	left: 270px;
+	top: -60px;
+	z-index: 1;
+}
+
+#field_mcfgf_num_limit_max_column {width: 90px;}

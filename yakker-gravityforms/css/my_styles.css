@@ -1,0 +1,23 @@
+/* placeholder for css */
+
+#gaddon-setting-row-welcome_page_template td {
+	position: relative;
+}
+
+#gaddon-setting-row-welcome_page_template td .all-merge-tags {
+	position: absolute;
+	top: 12px;
+	right: 0px;
+}
+
+#gaddon-setting-row-welcome_page_template td .CodeMirror-wrap {
+	margin-right: 22px
+}
+
+.gform-settings-input__container .CodeMirror-wrap {
+	width: 100%;
+}
+
+.gform-settings-input__container #iframe_height {
+	width: 70px;
+}

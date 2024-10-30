@@ -1,0 +1,15 @@
+{
+  "main.css": "/yakker-file-uploader/static/css/main.chunk.css",
+  "main.js": "/yakker-file-uploader/static/js/main.chunk.js",
+  "main.js.map": "/yakker-file-uploader/static/js/main.chunk.js.map",
+  "static/css/1.chunk.css": "/yakker-file-uploader/static/css/1.chunk.css",
+  "static/js/1.chunk.js": "/yakker-file-uploader/static/js/1.chunk.js",
+  "static/js/1.chunk.js.map": "/yakker-file-uploader/static/js/1.chunk.js.map",
+  "runtime~main.js": "/yakker-file-uploader/static/js/runtime~main.js",
+  "runtime~main.js.map": "/yakker-file-uploader/static/js/runtime~main.js.map",
+  "static/css/1.chunk.css.map": "/yakker-file-uploader/static/css/1.chunk.css.map",
+  "static/css/main.chunk.css.map": "/yakker-file-uploader/static/css/main.chunk.css.map",
+  "index.html": "/yakker-file-uploader/index.html",
+  "precache-manifest.4cda0285ffc431b071f5da1b0f8ff06e.js": "/yakker-file-uploader/precache-manifest.4cda0285ffc431b071f5da1b0f8ff06e.js",
+  "service-worker.js": "/yakker-file-uploader/service-worker.js"
+}

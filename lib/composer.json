@@ -1,0 +1,7 @@
+{
+    "require": {
+        "jjgrainger/wp-custom-post-type-class": "dev-master",
+        "tareq1988/wordpress-settings-api-class": "dev-master",
+        "layershifter/tld-extract": "^2.0"
+    }
+}

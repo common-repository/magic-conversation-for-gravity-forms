@@ -1,0 +1,508 @@
+[
+    {
+        "name": "jjgrainger/wp-custom-post-type-class",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/jjgrainger/wp-custom-post-type-class.git",
+            "reference": "012861247b20c07307e706eecae5689dbfda98e8"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/jjgrainger/wp-custom-post-type-class/zipball/012861247b20c07307e706eecae5689dbfda98e8",
+            "reference": "012861247b20c07307e706eecae5689dbfda98e8",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.0"
+        },
+        "time": "2016-08-24T08:37:12+00:00",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "psr-0": {
+                "CPT": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Joe Grainger",
+                "email": "hello@joegrainger.co.uk",
+                "homepage": "http://jjgrainger.co.uk"
+            }
+        ],
+        "description": "A single class to help you build more advanced custom post types quickly.",
+        "homepage": "https://github.com/jjgrainger/wp-custom-post-type-class"
+    },
+    {
+        "name": "layershifter/tld-database",
+        "version": "1.0.69",
+        "version_normalized": "1.0.69.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/layershifter/TLDDatabase.git",
+            "reference": "7423c7acdc5147268fb856f532a5d8875f6fe41e"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/layershifter/TLDDatabase/zipball/7423c7acdc5147268fb856f532a5d8875f6fe41e",
+            "reference": "7423c7acdc5147268fb856f532a5d8875f6fe41e",
+            "shasum": ""
+        },
+        "require": {
+            "ext-curl": "*",
+            "layershifter/tld-support": "^1.0.0",
+            "php": "^5.5.0 || ^7.0"
+        },
+        "require-dev": {
+            "codeclimate/php-test-reporter": "dev-master",
+            "mikey179/vfsstream": "^1.6",
+            "phpmd/phpmd": "@stable",
+            "phpunit/phpunit": "^4.8 || ^5.0",
+            "squizlabs/php_codesniffer": "~2.0"
+        },
+        "time": "2019-08-04T10:03:36+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "LayerShifter\\TLDDatabase\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "Apache-2.0"
+        ],
+        "authors": [
+            {
+                "name": "Alexander Fedyashov",
+                "email": "a@fedyashov.com"
+            }
+        ],
+        "description": "Database abstraction for Public Suffix List",
+        "keywords": [
+            "PSL",
+            "Public Suffix List",
+            "domain database",
+            "tld database"
+        ]
+    },
+    {
+        "name": "layershifter/tld-extract",
+        "version": "2.0.1",
+        "version_normalized": "2.0.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/layershifter/TLDExtract.git",
+            "reference": "b49cb89a4ed59a9474a47589054e56ce57787348"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/layershifter/TLDExtract/zipball/b49cb89a4ed59a9474a47589054e56ce57787348",
+            "reference": "b49cb89a4ed59a9474a47589054e56ce57787348",
+            "shasum": ""
+        },
+        "require": {
+            "layershifter/tld-database": "^1.0",
+            "layershifter/tld-support": "^1.1",
+            "php": "^5.5.0 || ^7.0",
+            "symfony/polyfill-intl-idn": "^1.10"
+        },
+        "require-dev": {
+            "phpmd/phpmd": "@stable",
+            "phpunit/phpunit": "^4.8 || ^5.0",
+            "squizlabs/php_codesniffer": "~2.0"
+        },
+        "time": "2019-02-11T14:37:05+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "files": [
+                "src/static.php"
+            ],
+            "psr-4": {
+                "LayerShifter\\TLDExtract\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "Apache-2.0"
+        ],
+        "authors": [
+            {
+                "name": "Alexander Fedyashov",
+                "email": "a@fedyashov.com"
+            }
+        ],
+        "description": "TLDExtract, library for extracting parts of domain, e.q. domain parser",
+        "keywords": [
+            "TLDExtract",
+            "domain parser"
+        ],
+        "abandoned": true
+    },
+    {
+        "name": "layershifter/tld-support",
+        "version": "1.1.1",
+        "version_normalized": "1.1.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/layershifter/TLDSupport.git",
+            "reference": "9b9eb2350db82239289f4e6eb250a2fe4865b0db"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/layershifter/TLDSupport/zipball/9b9eb2350db82239289f4e6eb250a2fe4865b0db",
+            "reference": "9b9eb2350db82239289f4e6eb250a2fe4865b0db",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.5",
+            "symfony/polyfill-mbstring": "^1.2"
+        },
+        "require-dev": {
+            "codeclimate/php-test-reporter": "dev-master",
+            "phpmd/phpmd": "@stable",
+            "phpunit/phpunit": "4.8.*",
+            "squizlabs/php_codesniffer": "2.*"
+        },
+        "time": "2016-06-18T12:28:04+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "LayerShifter\\TLDSupport\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "Apache-2.0"
+        ],
+        "authors": [
+            {
+                "name": "Alexander Fedyashov",
+                "email": "a@fedyashov.com"
+            }
+        ],
+        "description": "Support package for TLDDatabase and TLDExtract",
+        "abandoned": true
+    },
+    {
+        "name": "symfony/polyfill-intl-idn",
+        "version": "v1.22.1",
+        "version_normalized": "1.22.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/symfony/polyfill-intl-idn.git",
+            "reference": "2d63434d922daf7da8dd863e7907e67ee3031483"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/symfony/polyfill-intl-idn/zipball/2d63434d922daf7da8dd863e7907e67ee3031483",
+            "reference": "2d63434d922daf7da8dd863e7907e67ee3031483",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=7.1",
+            "symfony/polyfill-intl-normalizer": "^1.10",
+            "symfony/polyfill-php72": "^1.10"
+        },
+        "suggest": {
+            "ext-intl": "For best performance"
+        },
+        "time": "2021-01-22T09:19:47+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-main": "1.22-dev"
+            },
+            "thanks": {
+                "name": "symfony/polyfill",
+                "url": "https://github.com/symfony/polyfill"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Symfony\\Polyfill\\Intl\\Idn\\": ""
+            },
+            "files": [
+                "bootstrap.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Laurent Bassin",
+                "email": "laurent@bassin.info"
+            },
+            {
+                "name": "Trevor Rowbotham",
+                "email": "trevor.rowbotham@pm.me"
+            },
+            {
+                "name": "Symfony Community",
+                "homepage": "https://symfony.com/contributors"
+            }
+        ],
+        "description": "Symfony polyfill for intl's idn_to_ascii and idn_to_utf8 functions",
+        "homepage": "https://symfony.com",
+        "keywords": [
+            "compatibility",
+            "idn",
+            "intl",
+            "polyfill",
+            "portable",
+            "shim"
+        ]
+    },
+    {
+        "name": "symfony/polyfill-intl-normalizer",
+        "version": "v1.22.1",
+        "version_normalized": "1.22.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/symfony/polyfill-intl-normalizer.git",
+            "reference": "43a0283138253ed1d48d352ab6d0bdb3f809f248"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/symfony/polyfill-intl-normalizer/zipball/43a0283138253ed1d48d352ab6d0bdb3f809f248",
+            "reference": "43a0283138253ed1d48d352ab6d0bdb3f809f248",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=7.1"
+        },
+        "suggest": {
+            "ext-intl": "For best performance"
+        },
+        "time": "2021-01-22T09:19:47+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-main": "1.22-dev"
+            },
+            "thanks": {
+                "name": "symfony/polyfill",
+                "url": "https://github.com/symfony/polyfill"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Symfony\\Polyfill\\Intl\\Normalizer\\": ""
+            },
+            "files": [
+                "bootstrap.php"
+            ],
+            "classmap": [
+                "Resources/stubs"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Nicolas Grekas",
+                "email": "p@tchwork.com"
+            },
+            {
+                "name": "Symfony Community",
+                "homepage": "https://symfony.com/contributors"
+            }
+        ],
+        "description": "Symfony polyfill for intl's Normalizer class and related functions",
+        "homepage": "https://symfony.com",
+        "keywords": [
+            "compatibility",
+            "intl",
+            "normalizer",
+            "polyfill",
+            "portable",
+            "shim"
+        ]
+    },
+    {
+        "name": "symfony/polyfill-mbstring",
+        "version": "v1.22.1",
+        "version_normalized": "1.22.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/symfony/polyfill-mbstring.git",
+            "reference": "5232de97ee3b75b0360528dae24e73db49566ab1"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/5232de97ee3b75b0360528dae24e73db49566ab1",
+            "reference": "5232de97ee3b75b0360528dae24e73db49566ab1",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=7.1"
+        },
+        "suggest": {
+            "ext-mbstring": "For best performance"
+        },
+        "time": "2021-01-22T09:19:47+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-main": "1.22-dev"
+            },
+            "thanks": {
+                "name": "symfony/polyfill",
+                "url": "https://github.com/symfony/polyfill"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Symfony\\Polyfill\\Mbstring\\": ""
+            },
+            "files": [
+                "bootstrap.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Nicolas Grekas",
+                "email": "p@tchwork.com"
+            },
+            {
+                "name": "Symfony Community",
+                "homepage": "https://symfony.com/contributors"
+            }
+        ],
+        "description": "Symfony polyfill for the Mbstring extension",
+        "homepage": "https://symfony.com",
+        "keywords": [
+            "compatibility",
+            "mbstring",
+            "polyfill",
+            "portable",
+            "shim"
+        ]
+    },
+    {
+        "name": "symfony/polyfill-php72",
+        "version": "v1.22.1",
+        "version_normalized": "1.22.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/symfony/polyfill-php72.git",
+            "reference": "cc6e6f9b39fe8075b3dabfbaf5b5f645ae1340c9"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/symfony/polyfill-php72/zipball/cc6e6f9b39fe8075b3dabfbaf5b5f645ae1340c9",
+            "reference": "cc6e6f9b39fe8075b3dabfbaf5b5f645ae1340c9",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=7.1"
+        },
+        "time": "2021-01-07T16:49:33+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-main": "1.22-dev"
+            },
+            "thanks": {
+                "name": "symfony/polyfill",
+                "url": "https://github.com/symfony/polyfill"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Symfony\\Polyfill\\Php72\\": ""
+            },
+            "files": [
+                "bootstrap.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Nicolas Grekas",
+                "email": "p@tchwork.com"
+            },
+            {
+                "name": "Symfony Community",
+                "homepage": "https://symfony.com/contributors"
+            }
+        ],
+        "description": "Symfony polyfill backporting some PHP 7.2+ features to lower PHP versions",
+        "homepage": "https://symfony.com",
+        "keywords": [
+            "compatibility",
+            "polyfill",
+            "portable",
+            "shim"
+        ]
+    },
+    {
+        "name": "tareq1988/wordpress-settings-api-class",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/tareq1988/wordpress-settings-api-class.git",
+            "reference": "d39a9ad738b2e2840aa02eff0e84fc58ade60aee"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/tareq1988/wordpress-settings-api-class/zipball/d39a9ad738b2e2840aa02eff0e84fc58ade60aee",
+            "reference": "d39a9ad738b2e2840aa02eff0e84fc58ade60aee",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.2.4"
+        },
+        "time": "2016-10-31T09:22:05+00:00",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "classmap": [
+                "src/"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "GPLv2"
+        ],
+        "authors": [
+            {
+                "name": "Tareq Hasan",
+                "email": "tareq@wedevs.com",
+                "homepage": "http://tareq.wedevs.com",
+                "role": "Developer"
+            }
+        ],
+        "description": "WordPress settings API Abstraction Class",
+        "homepage": "https://github.com/tareq1988/wordpress-settings-api-class",
+        "keywords": [
+            "settings-api",
+            "wordpress",
+            "wp"
+        ]
+    }
+]

@@ -1,0 +1,93 @@
+{
+  "id": "226417",
+  "name": "MCFGF",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "29929",
+      "name": "emoji",
+      "font_class": "emoji",
+      "unicode": "e64a",
+      "unicode_decimal": 58954
+    },
+    {
+      "icon_id": "122688",
+      "name": "back",
+      "font_class": "back",
+      "unicode": "e697",
+      "unicode_decimal": 59031
+    },
+    {
+      "icon_id": "122704",
+      "name": "more",
+      "font_class": "more",
+      "unicode": "e6a7",
+      "unicode_decimal": 59047
+    },
+    {
+      "icon_id": "186635",
+      "name": "attachment",
+      "font_class": "attachment",
+      "unicode": "e6c0",
+      "unicode_decimal": 59072
+    },
+    {
+      "icon_id": "222043",
+      "name": "up",
+      "font_class": "up",
+      "unicode": "e613",
+      "unicode_decimal": 58899
+    },
+    {
+      "icon_id": "586906",
+      "name": "fullscreen",
+      "font_class": "fullscreen1",
+      "unicode": "e73b",
+      "unicode_decimal": 59195
+    },
+    {
+      "icon_id": "640740",
+      "name": "close",
+      "font_class": "close",
+      "unicode": "e627",
+      "unicode_decimal": 58919
+    },
+    {
+      "icon_id": "657333",
+      "name": "分期－删除",
+      "font_class": "shanchu",
+      "unicode": "e64b",
+      "unicode_decimal": 58955
+    },
+    {
+      "icon_id": "1567664",
+      "name": "tick",
+      "font_class": "tick",
+      "unicode": "e6a9",
+      "unicode_decimal": 59049
+    },
+    {
+      "icon_id": "4767016",
+      "name": "fullscreen-exit",
+      "font_class": "fullscreen-exit",
+      "unicode": "e7ec",
+      "unicode_decimal": 59372
+    },
+    {
+      "icon_id": "4943260",
+      "name": "删  除",
+      "font_class": "shanchu1",
+      "unicode": "e612",
+      "unicode_decimal": 58898
+    },
+    {
+      "icon_id": "7836108",
+      "name": "刷新",
+      "font_class": "shuaxin",
+      "unicode": "e663",
+      "unicode_decimal": 58979
+    }
+  ]
+}

@@ -1,0 +1,129 @@
+
+.mcfwc-woo-mobile {
+    width: 100%;
+}
+
+.yakker-html-wrapper {
+  width: 100%;
+}
+
+.yakker-html-wrapper .widget_shopping_cart {
+  background-color: #fff; 
+  color: #333;
+  width: 250px;
+}
+
+.yakker-html-wrapper  .product_list_widget li img {
+    position: absolute;
+    right: 0px;
+}
+
+.yakker-html-wrapper .product_list_widget a {
+  display: inline-block !important;
+}
+
+.yakker-html-wrapper .product_list_widget li .quantity {
+  color: #333;
+  display: block;
+}
+
+.yakker-html-wrapper .widget_shopping_cart ul {
+  padding: 0px;
+  margin: 0px;
+}
+
+.yakker-html-wrapper .widget_shopping_cart .buttons, .yakker-html-wrapper .widget_shopping_cart .total {
+  background-color: #fff; 
+  display: block;
+  width: 100%;
+}
+
+.yakker-html-wrapper .widget_shopping_cart .buttons {
+  padding-bottom: 0px;
+}
+
+.yakker-html-wrapper .widget_shopping_cart li {
+  padding-left: 0px;
+  padding-right: 0px; 
+}
+
+.mcfwc-woo-mobile table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.mcfwc-woo-mobile table caption {
+  font-size: 1.5em;
+  margin: .5em 0 .75em;
+}
+
+.mcfwc-woo-mobile table tr {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: .35em;
+}
+
+.mcfwc-woo-mobile table th,
+.mcfwc-woo-mobile table td {
+  padding: .625em;
+  text-align: center;
+}
+
+.mcfwc-woo-mobile table th {
+  font-size: .85em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 600px) {
+  .mcfwc-woo-mobile table {
+    border: 0;
+  }
+
+  .mcfwc-woo-mobile table caption {
+    font-size: 1.3em;
+  }
+  
+  .mcfwc-woo-mobile table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  
+  .mcfwc-woo-mobile table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: .625em;
+  }
+  
+  .mcfwc-woo-mobile table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .8em;
+    text-align: right;
+  }
+  
+  .mcfwc-woo-mobile table td::before {
+    /*
+    * aria-label has no advantage, it won't be read inside a .mcfwc-woo-mobile table
+    content: attr(aria-label);
+    */
+    content: attr(data-title);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .mcfwc-woo-mobile table td:last-child {
+    border-bottom: 0;
+  }
+}

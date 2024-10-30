@@ -1,0 +1,344 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Tooltip Creator</title>
+  <meta name="description" content="Create tooltip for your Wordpress website">
+  <meta name="author" content="Flannian from matemedia.com">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="css/jquery-ui.custom.css">
+  <link rel="stylesheet" href="css/jquery.miniColors.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="../css/jquery.qtip.min.css" />
+  <link type="text/css" rel="stylesheet" href="css/init.css" />
+  <script src="js/libs/modernizr-2.5.3.min.js"></script>
+  <style type="text/css">
+    .hidden {display: none}
+    .inline-container {display: inline-block;width: 100px; height: 50px;}
+    .cc-styles {margin-top:20px;}
+    .cc-styles h3 {display: inline-block; margin: 0 20px 0 0; width: 50px;}
+
+    select {
+      height:30px; background:transparent; 
+      padding: 5px;
+      -webkit-border-radius: 4px;
+      -khtml-border-radius: 4px;
+      -moz-border-radius: 4px;
+      border-radius: 4px;
+      -webkit-box-shadow: inset 0 0 4px rgba(0, 0, 0, .25), 0 0 2px #fff;
+      -moz-box-shadow: inset 0 0 4px rgba(0, 0, 0, .25), 0 0 2px #fff;
+      box-shadow: inset 0 0 4px rgba(0, 0, 0, .25), 0 0 2px #fff;
+      border: 1px solid #7e7e7e;
+      background-color: #fff;
+    }
+
+.qtip-content p {margin: 0px;padding: 0px;}
+
+#position,#font-weight {width: 260px;}
+/*.preview  {padding-top: 160px;height: 190px;}*/
+/*.preview .mm-tooltip-cf7 {font-weight: bold; border-bottom: 1px dotted;line-height: 100%;}*/
+.controls {margin-top: 28px;}
+  </style>
+
+</head>
+<body>
+<button id="toggle-conversation" type="button" class="btn btn-default">Turn on conversation</button>
+
+
+<div class="main" role="main">
+  <div class="configurator clearfix">
+    <div class="controls">
+      
+      <div class="clearfix">
+
+          <!-- <div id="section-styling">
+  <div class="examples">
+    <a name="styling-builtin"></a>
+    <div id="styling-builtin" data-type="Basic style" class="styles" style="margin-top:20px;">
+      <h3>Basic</h3>
+      <div class="qtip-container ">
+        <div id="#styling-type-default" title="Default yellow style" data-titlebar="false" data-style="qtip-default" class="qtip-default  qtip qtip-default qtip-shadow qtip-rounded">
+          <div class="qtip-titlebar"></div><div class="qtip-content"></div>
+        </div>
+      </div>
+      <div class="qtip-container ">
+        <div id="#styling-type-light" title="Light style, for the minimalists" data-title="Light" data-titlebar="true" data-style="qtip-light" class="qtip-default  qtip qtip-light qtip-shadow qtip-rounded">
+          <div class="qtip-titlebar"></div><div class="qtip-content"></div>
+        </div>
+      </div>
+      <div class="qtip-container ">
+        <div id="#styling-type-dark" title="An opposing dark style" data-title="Dark" data-titlebar="true" data-style="qtip-dark" class="qtip-default  qtip qtip-dark qtip-shadow qtip-rounded">
+          <div class="qtip-titlebar"></div><div class="qtip-content"></div>
+        </div>
+      </div>
+      <div class="qtip-container active">
+        <div id="#styling-type-red" title="Great for error related messages" data-title="Red" data-titlebar="true" data-style="qtip-red" class="qtip-default  qtip qtip-red qtip-shadow qtip-rounded">
+          <div class="qtip-titlebar"></div><div class="qtip-content"></div>
+        </div>
+      </div>
+      <div class="qtip-container ">
+        <div id="#styling-type-blue" title="Placid blue, for those informative messages" data-title="Blue" data-titlebar="true" data-style="qtip-blue" class="qtip-default  qtip qtip-blue qtip-shadow qtip-rounded">
+          <div class="qtip-titlebar"></div><div class="qtip-content"></div>
+        </div>
+      </div>
+      <div class="qtip-container ">
+        <div id="#styling-type-green" title="A generic but tasteful green style" data-title="Green" data-titlebar="true" data-style="qtip-green" class="qtip-default  qtip qtip-green qtip-shadow qtip-rounded">
+          <div class="qtip-titlebar"></div><div class="qtip-content"></div>
+        </div>
+      </div>
+      <div style="margin-top:10px;margin-bottom: 20px;">
+      <h3> </h3>&nbsp;
+      <input id="styling-rounded" type="checkbox" data-class="qtip-rounded" checked>
+      <label for="styling-rounded">Rounded</label>
+      <input id="styling-shadow" type="checkbox" data-class="qtip-shadow" checked>
+      <label for="styling-shadow">Shadow</label>
+      </div>
+    </div><a name="styling-extra"></a>
+    <div id="styling-extra" data-type="CSS3 style" class="styles">
+      <h3>CSS3</h3>
+      <div class="qtip-container ">
+        <div id="#styling-type-youtube" title="Google's YouTube style" data-title="Youtube" data-titlebar="true" data-style="qtip-youtube" class="qtip-default  qtip qtip-youtube qtip-shadow qtip-rounded">
+          <div class="qtip-titlebar"></div><div class="qtip-content"></div>
+        </div>
+      </div>
+      <div class="qtip-container ">
+        <div id="#styling-type-tipsy" title="Great minimalist Tipsy style" data-title="Tipsy" data-titlebar="true" data-style="qtip-tipsy" class="qtip-default  qtip qtip-tipsy qtip-shadow qtip-rounded">
+          <div class="qtip-titlebar"></div><div class="qtip-content"></div>
+        </div>
+      </div>
+      <div class="qtip-container ">
+        <div id="#styling-type-bootstrap" title="Bootstrap your qTip's with this style" data-title="Bootstrap" data-titlebar="true" data-style="qtip-bootstrap" class="qtip-default  qtip qtip-bootstrap qtip-shadow qtip-rounded">
+          <div class="qtip-titlebar"></div><div class="qtip-content"></div>
+        </div>
+      </div>
+      <div class="qtip-container ">
+        <div id="#styling-type-tipped" title="One of the many Tipped library styles" data-title="Tipped" data-titlebar="true" data-style="qtip-tipped" class="qtip-default  qtip qtip-tipped qtip-shadow qtip-rounded">
+          <div class="qtip-titlebar"></div><div class="qtip-content"></div>
+        </div>
+      </div>
+      <div class="qtip-container ">
+        <div id="#styling-type-jtools" title="jTools-style tooltips" data-title="jTools" data-titlebar="true" data-style="qtip-jtools" class="qtip-default  qtip qtip-jtools qtip-shadow qtip-rounded">
+          <div class="qtip-titlebar"></div><div class="qtip-content"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+    <div class="text">
+      <h3>Position</h3>
+      <div class="inline-container">
+          <select id="position" class="form-control">
+            <option value="bottom center|center top">top</option>
+            <option value="top center|center bottom">bottom</option>
+            <option value="right center|left center">left</option>
+            <option value="left center|right center">right</option>
+          </select>
+      </div>
+    </div>
+    <div class="font-size">
+      <h3>Offset Left</h3>
+      <input type="text" id="offsetLeftInput" data-bind="styles.offsetLeft" class="wheel">
+    </div>
+
+    <div class="font-size">
+      <h3>Offset Top</h3>
+      <input type="text" id="offsetTopInput" data-bind="styles.offsetTop" class="wheel">
+    </div>
+
+</div>
+<div class="clearfix">
+        <div class="text">
+          <h3>Line Height</h3>
+          <input type="text" data-bind="styles.lineHeight" class="wheel">
+        </div>
+        <div class="font-size">
+          <h3>Font Size</h3>
+          <input type="text" data-bind="styles.fontSize" class="wheel">
+        </div>
+        <div class="font-color">
+          <h3>Font Color</h3>
+          <input type="text" data-bind="styles.fontColor" class="color">
+        </div>
+      </div>
+      
+      <div class="clearfix second-row-ct hidden">
+        <input type="checkbox" class="second-row" data-bind="secondRow">
+        <div class="text">
+          <input type="text" data-bind="text.secondRow">
+        </div>
+        <div class="font-size">
+          <input type="text" data-bind="styles.secondRowFontSize" class="wheel">
+        </div>
+      </div>
+
+      <div class=" clearfix" style="margin-top: 15px;">
+        <div class="text">
+        <h3>Background Color</h3>
+        <input type="text" data-bind="styles.backgroundColor" class="color" id="background-color">
+        </div>
+        <div class="font-color">
+          <h3>Border Color</h3>
+          <input type="text" data-bind="styles.borderColor" class="color" id="border-color">
+        </div>
+        <div class="font-color">
+          <h3>Border Width</h3>
+          <input type="text" data-bind="styles.borderWidth" class="wheel" id="border-width">
+        </div>
+      </div>
+
+      <div class="border clearfix">
+        <h3>Border Radius</h3>
+        <div class="slider" id="border-slider"></div>
+        <input type="text" data-bind="styles.borderRadius" class="wheel" id="border">
+      </div>
+
+      <div class="padding clearfix">
+        <h3>Padding Multiply</h3>
+        <div class="slider" id="padding-slider"></div>
+        <input type="text" data-bind="styles.padding" id="padding">
+      </div>
+
+    </div>
+    <div class="preview"><div id="form-outer" class="panel panel-default">
+                <div class="panel-body">
+                  <form id="conversational" action="https://formspree.io/xnnawezx" method="POST">
+                    <h2>Feedback form</h2>
+
+                    <input type="text" name="_gotcha" style="display: none">
+                    <input type="hidden" name="_next" value="https://space10-community.github.io/conversational-form/thanks.html" />
+                    <input type="hidden" name="_subject" value="Submission on ConversationalForm" />
+
+                    <div class="form-group">
+                      <label for="your-name">Name</label>
+                      <input cf-questions="Hi there! What's your name?" type="name" class="form-control" name="your-name" id="your-name">
+                    </div>
+
+                    <div class="form-group">
+                      <label for="your-occupation">Occupation</label>
+                      <div class="radio">
+                        <label>
+                          <input cf-questions="Great to meet you, {previous-answer}! I'm a web form, what do you do?|Awesome, {previous-answer}! And what do you do?" type="radio" name="your-occupation" id="your-occupation-1" value="developer">
+                          Developer
+                        </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                          <input type="radio" name="your-occupation" id="your-occupation-2" value="designer">
+                          Designer
+                        </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                          <input type="radio" name="your-occupation" id="your-occupation-3" value="curious-mind">
+                          Curious mind
+                        </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                          <input type="radio" name="your-occupation" id="your-occupation-2" value="lost">
+                          Lost cause
+                        </label>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="your-company">Company</label>
+                      <input cf-questions="Which company are you with?" type="text" class="form-control" name="your-company" id="your-company">
+                    </div>
+
+                    <div class="form-group">
+                      <label for="your-opinion">Will conversational interfaces be everywhere?</label>
+                      <select cf-questions="Do you think conversational forms will replace web forms in the future?" name="your-opinion" id="your-opinion" class="form-control">
+                        <option></option>
+                        <option>Definitely</option>
+                        <option>Maybe</option>
+                        <option>No</option>
+                      </select>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="your-email">Email</label>
+                      <input cf-questions="If you want to stay updated on conversational interfaces from SPACE10, please give me your email." type="email" class="form-control" name="your-email" id="your-email">
+                    </div>
+
+                    <div class="form-group">
+                      <label for="thats-all">Final go</label>
+                      <select cf-questions="That's it for now! Have a great day." id="thats-all" class="form-control">
+                        <option></option>
+                        <option>You too!</option>
+                      </select>
+                    </div>
+
+                    <button type="submit" class="btn btn-default">Submit</button>
+                  </form>
+                </div>
+              </div></div>
+  </div>
+
+  <!-- <a href="#" onclick="parent.jQuery('#wpbody-content form').submit(); return false;" class="get-code">Save</a> -->
+
+
+
+  
+
+</div>
+
+<!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.2.min.js"><\/script>')</script>-->
+
+<script src="js/libs/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="../js/jquery.qtip.min.js"></script>
+
+<script src="js/libs/jquery-ui-1.8.20.custom.min.js"></script>
+<script src="js/libs/jquery.mousewheel.min.js"></script>
+<script src="js/libs/jquery.miniColors.min.js"></script>
+<script src="js/libs/jquery.cookie.js"></script>
+<!-- scripts concatenated and minified via ant build script-->
+<script src="js/tinycolor.js"></script>
+<script src="js/tooltip.js"></script>
+<script src="js/tweaker.js"></script>
+<script src="js/script.js"></script>
+<!-- <script src="js/init.js"></script> -->
+<!-- end scripts-->
+<script type="text/javascript">
+  $('.mm-tooltip-cf7').each(function() { // Notice the .each() loop, discussed below
+      console.log('Tooltip.options()', Tooltip.options());
+      $(this).qtip($.extend(Tooltip.options(), {
+          content: {
+              text: $(this).next('div') // Use the "div" element next to this for the content
+          },
+          show: true
+      }));
+  });
+</script>
+
+<script type="text/javascript" src="../js/20171025/conversational-form.min.js"></script>
+<script>
+      (function(){
+        setTimeout(function() {
+          $(document).on("click", "#toggle-conversation", function(){
+            if(!window.ConversationalForm){
+              window.ConversationalForm = new cf.ConversationalForm({
+                formEl: document.getElementById("conversational"),
+                context: document.getElementById("form-outer"),
+                userImage: "img/human.png"
+              });
+            }
+            $(this).addClass("disabled");
+            var form = $(".conversational-form");
+            if (form.hasClass("conversational-form--show")) {
+              $(this).removeClass("active");
+              $(this).text("Turn on conversation");
+              $(".conversational-form").removeClass("conversational-form--show");
+            } else {
+              $(this).addClass("active");
+              $(this).text("Turn off conversation");
+              $(".conversational-form").addClass("conversational-form--show");
+            }
+            $(this).removeClass("disabled");
+          });
+        }, 200);
+      })();
+    </script>
+</body>
+</html>

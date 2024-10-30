@@ -1,0 +1,95 @@
+<style>
+	.mcfgf_welcome_box .mcfgf_welcome_description {
+		margin-top: 15px;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		width: 70%;
+		opacity: 1;
+		animation: fade-in-right ease 1.6s forwards;
+	}
+	.mcfgf_welcome_box .mcfgf_welcome_description {
+		line-height: 19px;
+		font-size: 15px;
+	}
+	.mcfgf_welcome_box .mcfgf_welcome_description p {
+		font-weight: bold;
+		text-align: center;
+		color: #585858;
+		margin: 12px 5px 5px 5px;
+		font-size: 18px;
+	}
+	
+	.mcfgf_welcome_box .mcfgf_welcome_description .logobox {
+		border-radius: 50%;
+		width: 80px;
+		height: 80px;
+		background: #ff9700;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		padding: 18px;
+		box-sizing: border-box;
+	}
+	.mcfgf_welcome_box .mcfgf_welcome_description img {
+		width: 100%;
+		height: 100%;
+	}
+	.mcfgf_welcome_box .mcfgf_welcome_description p.mcfgf_welcome_hi {
+		font-weight: normal;
+		margin-top: 5px;
+		font-size: 18px;
+	}
+	
+	.star {
+		position: relative;
+		display: inline-block;
+		width: 0;
+		height: 0;
+		margin-left: .6em;
+		margin-right: .6em;
+		margin-bottom: 1.0em;
+		border-right: .3em solid transparent;
+		border-bottom: .7em  solid #ff9700;
+		border-left: .3em solid transparent;
+		/* Controlls the size of the stars. */
+		font-size: 9px;
+	}
+	.star:before, .star:after {
+		content: '';
+		display: block;
+		width: 0;
+		height: 0;
+		position: absolute;
+		top: .6em;
+		left: -1em;
+		border-right: 1em solid transparent;
+		border-bottom: .7em  solid #ff9700;
+		border-left: 1em solid transparent;
+		-webkit-transform: rotate(-35deg);
+						transform: rotate(-35deg);
+	}
+	.star:after {
+		-webkit-transform: rotate(35deg);
+						transform: rotate(35deg);
+	}
+</style>
+<div class="mcfgf_welcome_box">
+	<div class="mcfgf_welcome_description">
+		<div class="logobox">
+			<img alt="avatar" src="http://pc2pp.com/mt/wp-content/plugins/magic-conversation-for-gravity-forms/assets/img/openConversation.png"/>
+		</div>
+		<p>Magic Conversation</p>
+		<p> 
+			<i class="star"></i>
+			<i class="star"></i>
+			<i class="star"></i>
+			<i class="star"></i>
+			<i class="star"></i>
+		</p>
+		<p>GravityForms Chatbot Builder</p>
+		<p style="font-size: 13px;"><i class="zmdi zmdi-quote" style="margin-right: 5px;-ms-transform: rotate(180deg);-webkit-transform: rotate(180deg);transform: rotate(180deg);"></i>
+			My name is Magic Conversation. I'm a Wordpress plugin for converting GravityForms form into chatbots.
+			<i class="zmdi zmdi-quote" style="margin-left: 5px;"></i> </p>
+	</div>
+</div>
